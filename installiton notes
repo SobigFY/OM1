@@ -1,0 +1,34 @@
+ ## Installation
+
+ ### For Linux
+-    sudo apt-get update
+-    sudo apt-get install portaudio19-dev python-all-dev
+-    sudo apt-get install ffmpeg
++Tested on **Ubuntu 22.04** (other distributions may differ slightly).
++
++```bash
++sudo apt-get update
++
++# Install audio dependencies
++sudo apt-get install portaudio19-dev python3-dev
++
++# Install video/image dependencies
++sudo apt-get install ffmpeg libsm6 libxext6
++
++# Ensure Python3 and pip are up to date
++sudo apt-get install python3-pip
++pip3 install --upgrade pip
++```
++
++### For macOS (via Homebrew)
++```bash
++brew install portaudio ffmpeg
++```
++
++### For Windows (via Chocolatey or manual install)
++```bash
++choco install portaudio ffmpeg
++```
++
++> 💡 **Note:** Some image processing libraries (like OpenCV) may require `libsm6` and `libxext6` on Linux.
++> These have been added above to prevent runtime errors such as `error while loading shared libraries: libXext.so.6`.
